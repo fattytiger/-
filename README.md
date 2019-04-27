@@ -1,21 +1,25 @@
 ### PC端练习项目
 
-+ 练习H5,C3相关知识点
-+ 无服务端相关内容
++ 仿制网易云界面制作的web端音乐播放器
++ 使用HTML5,CSS3相关技术
+
+### 功能列表
++ 播放音乐
++ 切换播放模式
++ 显示（关闭）操作栏
++ 歌词滚动
++ 播放列表
 
 
 
 ### 项目截图
 
-![第一屏](https://706f-point-28b6b8-1256633983.tcb.qcloud.la/github/page_01.png?sign=a8019202d3258df2a3482a9059a32f21&t=1556199875)
+![第一张](https://706f-point-28b6b8-1256633983.tcb.qcloud.la/github/m1.png?sign=9a209a1cd8a6b5cb99f860c5f0ea6b59&t=1556374037)
 
-![第二屏](https://706f-point-28b6b8-1256633983.tcb.qcloud.la/github/page_02.png?sign=c742968094c9ad633ba4e9c344fa23cb&t=1556200057)
+![第二张](https://706f-point-28b6b8-1256633983.tcb.qcloud.la/github/m2.png?sign=3e7ab2b5d922580ddf407c7512acf206&t=1556374145)
 
-![第三屏](https://706f-point-28b6b8-1256633983.tcb.qcloud.la/github/page_03.png?sign=8b11dcfba42a9eab28a8ee2fc5fb0f24&t=1556200068)
+![第三张](https://706f-point-28b6b8-1256633983.tcb.qcloud.la/github/m3.png?sign=bbafbd253c4c6329bee9f5de42bad6be&t=1556374160)
 
-![第四屏](https://706f-point-28b6b8-1256633983.tcb.qcloud.la/github/page_04.png?sign=f532ef01b159e5f15e16ba7a9e8183d6&t=1556200080)
-
-![第五屏](https://706f-point-28b6b8-1256633983.tcb.qcloud.la/github/page_05.png?sign=34444e461810897076ac62619b2b071b&t=1556200091)
 
 
 
