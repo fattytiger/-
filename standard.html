@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐</title>
+    <meta name="Author" content="yanghu">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.css"/>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/drag.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<audio id="my_audio">
+	</audio>
+	<div class="left">
+		<div class="line">
+			<img id="cover" src="img/pickup.png"/>
+		</div>
+		<div class="now_pic" id="ch_cover">
+		</div>
+		<canvas id="my_cd" width="470px" height="470px"></canvas>
+		<div class="controls">
+			<button class="btn">喜欢</button>
+			<button class="btn">收藏</button>
+			<button class="btn">下载</button>
+			<button class="btn">分享</button>
+		</div>
+	</div>
+	<div class="right">
+		<span class="fa fa-compress" id="compress"></span>
+		<div class="title">
+			<h1 id="music_name">爱我别走-Live</h1>
+			<span>MV</span>
+			<span>本地</span>
+		</div>
+		<ul class="info clear">
+			<li>
+				专辑：<span id="zhuanji">活出生命live</span>
+			</li>
+			<li>
+				歌手：<span id="singner">张学友</span>
+			</li>
+			<li>
+				来源：<span id="source">我喜欢的音乐</span>
+			</li>
+			<li class="clear"></li>
+		</ul>
+		<div class="music_ariticle">
+			<div class="wrap_geci" id="wrap_geci">
+				
+			</div>
+		</div>
+	</div>
+	<div class="play_list">
+		<div class="play_top">
+			<div class="music_list" id="pl_list">播放列表</div>
+			<div class="history" id="history_record">历史记录</div>
+			<span class="fa fa-times" id="close"></span>
+		</div>
+		<div class="play_info">
+			<span>总共<span id="song_conunts">4</span>首</span>
+			<span class="select"><span class="fa fa-plus-circle"></span>	收藏全部</span>
+			<span class="clear_music" id="clear_music"><span class="fa fa-trash-o"></span>	清空</span>
+		</div>
+		<div class="detail" id="detail">
+		</div>
+	</div>
+	<div class="footer">
+		<div class="control">
+			<span class="btn" id="back_music"><span class="fa fa-step-backward"></span></span>
+			<span class="btn" id="change_pause"><span class="fa fa-play" id="change_pause_btn"></span></span>
+			<span class="btn" id="next_music"><span class="fa fa-step-forward"></span></span>
+		</div>
+		<div class="progress">
+			<span id="persent_time">00 :00</span>
+			<div class="pro" id="pro">
+				<div class="wrap" id="wrap">
+				</div>
+				<div class="wrap_rad" id="wrap_red"></div>
+			</div>
+			<span id="all_time">03:46</span>
+			<span id="sound"><span class="fa fa-volume-up" id="volunm_btn"></span></span>
+			<div class="sound_pro" id="sound_pro">
+				<div class="sound_wrap" id="sound_wrap"></div>
+				<div class="sound_wrap_red" id="sound_wrap_red"></div>
+			</div>
+			<span id="change_moud"><span class="fa fa-random"></span></span>
+			<span id="geci">歌词</span>
+			<div id="show_list"><span class="fa fa-list"></span><span id="music_counts">8</span></div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	var wrap = document.getElementById("wrap");
+	var wrap_red =document.querySelector("#wrap_red")
+	var sound_wrap = document.querySelector("#sound_wrap");
+	var sound_wrap_red = document.querySelector("#sound_wrap_red");
+	var my_audio = document.querySelector("#my_audio")
+	var pro = document.querySelector(".pro")
+	var callback = {
+		//回调
+		move:function(){
+			wrap_red.style.width = wrap.offsetLeft + "px"
+		}
+	}
+	var sound_back={
+		move:function(){
+			sound_wrap_red.style.width = sound_wrap.offsetLeft + "px"
+		}
+	}
+	$$.drag(wrap,callback);
+	$$.drag(sound_wrap,sound_back);
+</script>

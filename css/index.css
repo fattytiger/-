@@ -1,0 +1,521 @@
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+.bg_blur{
+	background-size: cover;
+}
+.clear:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.display_none{
+	visibility: hidden;
+}
+/*左边*/
+.left{
+	width: 40%;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+.left>.now_pic>img{
+	height: 230px;
+	width: 230px;
+	position: absolute;
+	left: 220px;
+	top: 235px;
+	border-radius: 50%; 
+	z-index: 3;
+	/*animation:my_animation 5s infinite linear normal;*/
+}
+@keyframes  my_animation{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+@-moz-keyframes my_animation{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(180deg);}
+}
+#my_cd{
+	position: absolute;
+	left: 100px;
+	top: 115px;
+}
+.controls{
+	width: 75%;
+	position: absolute;
+	left: 100px;
+	bottom:150px ;
+}
+.controls>.btn{
+	width: 80px;
+	height: 30px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	float: left;
+	margin: 0 15px;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.controls>.btn:hover{
+	background-color:#FF0000 ;
+	color: #FFFFFF;
+}
+.line{
+	position: absolute;
+	left:320px;
+	top:0;
+	z-index: 3;
+}
+.right:before{
+	content: "";
+	display: block;
+}
+.right{
+	float: left;
+	width: 60%;
+	height: 100%;
+	margin-top: 100px;
+	position: relative;
+}
+.right>.title,.right>.info,.right>.music_ariticle{
+	width: 70p%;
+	margin: 0 auto;
+}
+
+.right>span{
+	display: block;
+	height: 35px;
+	width: 50px;
+	position: absolute;
+	font-size:30px ;
+	line-height: 35px;
+	text-align: center;
+	right: 100px;
+	top:-50px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	transition: all 0.5s ease-in;
+}
+.right>span:hover{
+	background-color: #CCCCCC;
+}
+/*歌名*/
+.right>.title>h1{
+	display: inline-block;
+	font:30px/60px "microsoft yahei";
+}
+.right>.title>span{
+	display: inline-block;
+	font: 15px/20px;
+	border: 1px solid #FF0000;
+	color: #FF0000;
+}
+
+.right>.title,.right>.info{
+	margin-left: 100px;
+}
+/*info*/
+.right>.info>li{
+	display: block;
+	height: 40px;
+	font: 15px/40px "microsoft yahei";	
+	float: left;
+}
+.right>.info>li:nth-child(3){
+	margin-left: 50px;
+}
+.right>.info>li:nth-child(2){
+	margin-left: 20px;
+}
+
+.right>.info>li>#zhuanji{
+	color: skyblue;
+}
+.right>.info>li>#singner{
+	color: skyblue;
+}
+.right>.info>li>#source{
+	color: skyblue;
+}
+.right>.music_ariticle{
+	overflow: hidden;
+	position: relative;
+	height:500px;
+	width: 500px;
+	margin-left: 0;
+	overflow: hidden;
+}
+.right>.music_ariticle>.wrap_geci{
+	height:2500px;
+	width: 500px;
+	position: absolute;
+	top: 100px;
+	left: 0;
+}
+.geci{
+	display: block;
+	height: 25px;
+	width: 500px;
+	font-size: 15px;
+	line-height: 25px;
+	text-align: center;
+}
+
+
+.footer{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	background-color: #e3e3e3;
+	transition: all 0.5s ease-in;
+}
+/*歌词*/
+
+
+
+
+.footer>.control{
+	position: absolute;
+	left: 50px;
+	top: 10px;
+}
+.footer>.control>.btn{
+	display: block;
+	width: 30px;
+	height: 30px;
+	float: left;
+	background: red;
+	margin-left: 20px;
+	font: 15px/30px "微软雅黑";
+	text-align: center;
+	border-radius: 50% ;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.footer>.progress{
+	position: absolute;
+	left: 350px;
+	top: 15px;
+}
+.footer>.progress>.pro{
+	cursor: pointer;
+	position: absolute;
+	left: 60px;
+	top: 8px;
+	width: 500px;
+	height: 4px;
+	z-index: 1;
+	background:#c4c4c4;
+}
+.footer>.progress>.pro>.wrap{
+	height: 5px;
+	width: 5px;
+	background: red;
+	position: absolute;
+	left: 0;
+	top: -5px;
+	border:5px solid #FFFFFF;
+	border-radius: 50%;
+	z-index: 2;
+}
+.footer>.progress>.pro>.wrap_rad{
+	position: absolute;
+	height: 4px;
+	left: 0;
+	top: 0;
+	background: red;
+}
+.footer>.progress>span:nth-child(1){
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 20px;
+	font: 15px/20px "微软雅黑";
+	text-align: center;
+	left: 0;
+	top: 0px;
+}
+.footer>.progress>#all_time{
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 20px;
+	font: 15px/20px "微软雅黑";
+	text-align: center;
+	left: 580px;
+	top: 0px;
+}
+.footer>.progress>#sound{
+	position: absolute;
+	left: 650px;
+	top: 0;
+	height: 20px;
+	font: 20px/20px "微软雅黑";
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.footer>.progress>#sound:hover{
+	color: #FF0000;
+}
+.footer>.progress>.sound_pro{
+	position: absolute;
+	left: 680px;
+	width: 100px;
+	height: 4px;
+	background:#c4c4c4;
+	top: 8px;
+	cursor: pointer;
+}
+.footer>.progress>.sound_pro>.sound_wrap{
+	height: 5px;
+	width: 5px;
+	background: red;
+	position: absolute;
+	left: 0;
+	top: -5px;
+	border:5px solid #FFFFFF;
+	border-radius: 50%;
+	z-index: 2;
+}
+.footer>.progress>.sound_pro>.sound_wrap_red{
+	position: absolute;
+	height: 4px;
+	left: 0;
+	top: 0;
+	background: red;
+}
+.footer>.progress>#change_moud{
+	position: absolute;
+	left: 820px;
+	top: 0;
+	height: 20px;
+	font: 20px/20px "微软雅黑";
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.footer>.progress>#change_moud:hover{
+	color: #FF0000;
+}
+.footer>.progress>#geci{
+	position: absolute;
+	left: 880px;
+	top: 0;
+	display: block;
+	width:50px;
+	height: 20px;
+	font: 15px/20px "微软雅黑";
+	text-align: center;
+	border: 1px solid #575757;
+	color: #575757;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.footer>.progress>#geci:hover{
+	color: #FF0000;
+	border-color: #FF0000;
+}
+.footer>.progress>#show_list{
+	position: absolute;
+	left: 950px;
+	top: 0;
+	height: 20px;
+	width: 50px;
+	font: 20px/20px "微软雅黑" !important;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.footer>.progress>#show_list:hover{
+	color: #FF0000;
+}
+.footer>.progress>#show_list>#music_counts{
+	position: absolute;
+	display: block;
+	left: 35px;
+	top: 1px;
+	width: 30px;
+	height: 17px;
+	font: 13px/17px "微软雅黑";
+	background: #ccc;
+	border-radius: 0 15px 15px 0;
+	text-align: center;
+}
+.play_list{
+	position: absolute;
+	width: 750px;
+	height: 700px;
+	background-color: #F2F2F2;
+	right:100px;
+	bottom:30px ;
+	transition: all 0.5s ease-in;	
+}
+.play_list>.play_top{
+	width: 100%;
+	height: 60px;
+	background: #F2F2F2;
+}
+.play_list>.play_top>.music_list{
+	width: 100px;
+	height: 30px;
+	font: 15px/30px "微软雅黑";
+	position: absolute;
+	left: 274px;
+	top: 15px;
+	color: #FFFFFF;
+	background:#7d7d85;
+	text-align: center;
+	border-radius: 10px 0 0 10px;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.play_list>.play_top>.history{
+	width: 100px;
+	height: 30px;
+	background-color: #FFFFFF;
+	font: 15px/30px "微软雅黑";
+	position: absolute;
+	left: 375px;
+	top: 15px;
+	text-align: center;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.play_list>.play_top>#close{
+	display: block;
+	height: 30px;
+	width: 30px;
+	font-size: 25px;
+	position: absolute;
+	line-height: 30px;
+	right: 15px;
+	top: 15px;
+	cursor: pointer;
+	transition: all 0.5s ease-in; 
+}
+.play_list>.play_top>#close:hover{
+	color: #FF0000;
+}
+.play_list>.play_info{
+	height: 40px;
+	width: 100%;
+	position: absolute;
+	border-top: 1px solid #CCCCCC;
+	top: 60px;
+	left: 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+.play_list>.play_info>span:nth-child(1){
+	display: block;
+	height: 25px;
+	width: 100px;
+	line-height: 25px;
+	font-size: 15px;
+	position: absolute;
+	text-align: center;
+	left: 15px;
+	top: 7.5px;
+}
+.play_list>.play_info>span:nth-child(2){
+	display: block;
+	height: 20px;
+	width: 100px;
+	line-height: 20px;
+	font-size: 15px;
+	position: absolute;
+	text-align: center;
+	right: 200px;
+	top: 7.5px;
+	border-right: 2px solid #CCCCCC;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.play_list>.play_info>span:nth-child(2):hover{
+	color: #FF0000;
+}
+.play_list>.play_info>span:nth-child(3){
+	display: block;
+	height: 20px;
+	width: 80px;
+	line-height: 20px;
+	font-size: 15px;
+	position: absolute;
+	text-align: center;
+	right: 100px;
+	top: 7.5px;
+	cursor: pointer;
+	transition: all 0.5s ease-in;
+}
+.play_list>.play_info>span:nth-child(3):hover{
+	color: red;
+}
+.play_list>.detail{
+	position: absolute;
+	left: 0;
+	top: 102px;
+	width: 100%;
+	font: 18px/30px "微软雅黑";
+	transition: all 0.5s ease-in;
+}
+.show_detail{
+	height: 30px;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+}
+.show_detail>span:first-child{
+	display: block;
+	height: 30px;
+	width: 20px;
+	position: absolute;
+	left:10px;
+	line-height: 30px;
+	font-size: 12px;
+}
+.show_detail>span:nth-child(2){
+	display: block;
+	height: 30px;
+	width: 100px;
+	position: absolute;
+	line-height: 30px;
+	left: 40px;
+	font-size: 15px;
+	cursor: pointer;
+}
+.show_detail>span:nth-child(3){
+	display: block;
+	height: 30px;
+	width: 100px;
+	position: absolute;
+	left: 400px;
+	font-size: 15px;
+	cursor: pointer;
+}
+.show_detail>span:nth-child(4){
+	display: block;
+	height: 30px;
+	width: 100px;
+	position: absolute;
+	font-size: 15px;
+	line-height: 30px;
+	right: 40px;
+	cursor: pointer;
+}
+.show_detail>span:nth-child(5){
+	display: block;
+	height: 30px;
+	width: 100px;
+	position: absolute;
+	font-size: 15px;
+	line-height: 30px;
+	right: 0px;
+}

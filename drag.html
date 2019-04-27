@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			height: 100%;
+			overflow: hidden;
+		}
+		#test{
+			position: absolute;
+			width: 150px;
+			height: 150px;
+			background: pink;
+			left: 0;
+			top: 0;
+		}
+	</style>
+	<body>
+		<div id="test"></div>
+	</body>
+</html>
+<script type="text/javascript">
+		/*
+		 拖拽的思路
+		 	1.拿到元素一开始的位置
+		 		拿到鼠标点击元素时元素一开始的位置
+		 	2.拿到鼠标移动的距离
+		 		鼠标点击的位置
+		 		鼠标移动时实时的位置（鼠标移动时，实时位置-鼠标点击的位置）
+		 	3.确定鼠标移动后，元素的位置
+		 		元素一开始的位置+鼠标移动的距离
+		 		
+		 * */
+		window.onload=function(){
+			var test_node = document.querySelector("#test");
+			//拿到鼠标点击元素时元素一开始的位置
+			var start_point = {x:0,y:0};
+			var mouse_down_point = {x:0,y:0}
+			
+			test_node.onmousedown = function(ev){
+				ev = ev||event;
+				//鼠标点击元素时一开始的位置
+				start_point.x = this.offsetLeft;
+				start_point.y = this.offsetTop;
+				//鼠标点击的位置
+				mouse_down_point.x = ev.clientX;
+				mouse_down_point.y = ev.clientY;
+				
+				document.onmousemove = function(ev){
+						ev = ev||event;
+						//获取鼠标实时的位置
+						var mouse_move_point = {x:0,y:0}
+						mouse_move_point.x = ev.clientX;
+						mouse_move_point.y = ev.clientY;
+						
+						//差值
+						var dis = {x:0,y:0};
+						dis.x = mouse_move_point.x - mouse_down_point.x;
+						dis.y = mouse_move_point.y - mouse_down_point.y;
+						
+						
+						//元素一开始的位置+鼠标移动的距离
+						test_node.style.left = start_point.x + dis.x +"px";
+						test_node.style.top = start_point.y + dis.y +"px";
+						
+				}
+				document.onmouseup = function(){
+					document.onmousemove =document.onmousemove = null
+				}
+				
+				//阻止事件的默认行为
+				return false;
+			}
+		}
+		
+</script>
